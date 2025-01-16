@@ -21,6 +21,7 @@ class PracticalTest02MainActivityv9 : AppCompatActivity() {
     private lateinit var button: Button
     private lateinit var textView: TextView
     private lateinit var autocompleteReceiver: AutocompleteReceiver
+    private lateinit var serverButtton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,13 @@ class PracticalTest02MainActivityv9 : AppCompatActivity() {
         button = findViewById(R.id.button)
         textView = findViewById(R.id.textView)
         wordTextLitere = findViewById(R.id.editTextLitere)
+        serverButtton = findViewById(R.id.serverButton)
+
+        // when the server button is clicked, the MapsActivity is started
+        serverButtton.setOnClickListener {
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
 
         autocompleteReceiver = AutocompleteReceiver { suggestions ->
             textView.text = suggestions

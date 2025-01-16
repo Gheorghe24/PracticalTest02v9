@@ -28,10 +28,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true">
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAuAIPPLYVEF8-GbnWkDlCRRYQWVyPvO60" />
     </application>
 
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyAuAIPPLYVEF8-GbnWkDlCRRYQWVyPvO60" />
+
 
 </manifest>
